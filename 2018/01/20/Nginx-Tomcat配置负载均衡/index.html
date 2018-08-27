@@ -108,20 +108,32 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="云恒子的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="一、准备工作(1)下载Tomcat8.5,网址： https://tomcat.apache.org/download-80.cgi (2)下载Nginx，网址：http://nginx.org/en/download.html 二、配置Tomcat(1)将下载好的Tomcat解压并命名为Tomcat1，复制Tomcat1至当前目录并重命名为Tomcat2(2)打开~/Tomcat1/conf/s">
+<meta name="keywords" content="配置">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nginx+Tomcat配置负载均衡">
+<meta property="og:url" content="http://yoursite.com/2018/01/20/Nginx-Tomcat配置负载均衡/index.html">
 <meta property="og:site_name" content="云恒子的博客">
+<meta property="og:description" content="一、准备工作(1)下载Tomcat8.5,网址： https://tomcat.apache.org/download-80.cgi (2)下载Nginx，网址：http://nginx.org/en/download.html 二、配置Tomcat(1)将下载好的Tomcat解压并命名为Tomcat1，复制Tomcat1至当前目录并重命名为Tomcat2(2)打开~/Tomcat1/conf/s">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://i.imgur.com/UKoIDmd.png">
+<meta property="og:image" content="https://i.imgur.com/42hdqnM.png">
+<meta property="og:image" content="https://i.imgur.com/cksnzpG.png">
+<meta property="og:image" content="https://i.imgur.com/DkvHXf1.png">
+<meta property="og:image" content="https://i.imgur.com/z6L0XI9.png">
+<meta property="og:image" content="https://i.imgur.com/m8hUsit.png">
+<meta property="og:updated_time" content="2018-02-15T09:29:52.589Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="云恒子的博客">
+<meta name="twitter:title" content="Nginx+Tomcat配置负载均衡">
+<meta name="twitter:description" content="一、准备工作(1)下载Tomcat8.5,网址： https://tomcat.apache.org/download-80.cgi (2)下载Nginx，网址：http://nginx.org/en/download.html 二、配置Tomcat(1)将下载好的Tomcat解压并命名为Tomcat1，复制Tomcat1至当前目录并重命名为Tomcat2(2)打开~/Tomcat1/conf/s">
+<meta name="twitter:image" content="https://i.imgur.com/UKoIDmd.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/20/Nginx-Tomcat配置负载均衡/"/>
 
 
 
@@ -131,7 +143,7 @@
   };
 </script>
 
-  <title>云恒子的博客</title>
+  <title>Nginx+Tomcat配置负载均衡 | 云恒子的博客</title>
   
 
 
@@ -178,8 +190,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -216,7 +227,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
     <a href="/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Startseite</a>
   </li>
@@ -260,153 +271,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/27/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="云恒子">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="云恒子的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/27/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-
-              
-                
-              
-
-              <time title="Post created: 2018-08-27 22:16:39" itemprop="dateCreated datePublished" datetime="2018-08-27T22:16:39+08:00">2018-08-27</time>
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -438,11 +305,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/20/Nginx-Tomcat配置负载均衡/" itemprop="url">
-                  Nginx+Tomcat配置负载均衡
-                </a>
+          <h1 class="post-title" itemprop="name headline">Nginx+Tomcat配置负载均衡
               
             
           </h1>
@@ -535,13 +398,9 @@
       
 
       
-        
-          
-            <p><strong>一、准备工作<br></strong><br>(1)<strong>下载Tomcat8.5</strong>,网址： <a href="https://tomcat.apache.org/download-80.cgi" target="_blank" rel="noopener">https://tomcat.apache.org/download-80.cgi</a> <br><br>(2)<strong>下载Nginx</strong>，网址：<a href="http://nginx.org/en/download.html" target="_blank" rel="noopener">http://nginx.org/en/download.html</a><br><br></p>
+        <p><strong>一、准备工作<br></strong><br>(1)<strong>下载Tomcat8.5</strong>,网址： <a href="https://tomcat.apache.org/download-80.cgi" target="_blank" rel="noopener">https://tomcat.apache.org/download-80.cgi</a> <br><br>(2)<strong>下载Nginx</strong>，网址：<a href="http://nginx.org/en/download.html" target="_blank" rel="noopener">http://nginx.org/en/download.html</a><br><br></p>
 <p><strong>二、配置Tomcat<br></strong><br>(1)将下载好的Tomcat解压并命名为Tomcat1，复制Tomcat1至当前目录并重命名为Tomcat2<br><br>(2)打开~/Tomcat1/conf/server.xml文件，修改三个端口值(可修改为其他值，只要未被占用即可)<br><br><img src="https://i.imgur.com/UKoIDmd.png" alt=""><br><br><img src="https://i.imgur.com/42hdqnM.png" alt=""><br><br><img src="https://i.imgur.com/cksnzpG.png" alt=""><br><br>对~/Tomcat2/conf/server.xml文件进行上述相同的操作，端口值依次改为：8205  8280  8209<br><br><br>(3)在两个Tomcat的webapps/ROOT/下新建success.jsp文件，文件内容依次为：<br><br><img src="https://i.imgur.com/DkvHXf1.png" alt=""><br><br><br><img src="https://i.imgur.com/z6L0XI9.png" alt=""><br><br><br>(4)启动Tomcat测试：<br><br>在Tomcat1的bin目录下双击startup.bat启动Tomcat<br><br>ps:如果之前安装过Tomcat且配置到系统环境中，这里双击会打开之前的Tomcat版本,解决方法：用记事本或其他编辑器打开startup.bat自定义CATALINA_HOME值，set “CATALINA_HOME=Tomcat1所在目录\Tomcat1”,再双击startup.bat即可。<br><br>在浏览器上访问：localhost:8180/success.jsp,会显示tomcat1<br><br>同样对Tomcat2进行上述操作。<br><br><br><strong>三、配置Nginx</strong><br><br>将下载好的Nginx解压，打开~/conf/nginx.conf文件，相关配置如下：<br><br><img src="https://i.imgur.com/m8hUsit.png" alt=""><br><br>upstream后面的hello.com必须和location中的hello.com相一致,server后面的URL与两个Tomcat的相对应；<br><br>upstream中的weight是权重<br><br>server中listen的端口号根据实际情况选择修改<br><br><br><strong>四、测试<br></strong><br>启动Nginx:在Nginx目录下打开命令行，输入start nginx<br><br>两个Tomcat之前的方法开启<br><br>在浏览器上访问localhost:8089/success.jsp,会显示和tomcat1或tomcat2，多刷新几次，会发现tomcat1的次数与tomcat2的次数比值为：2：5<br><br><br><strong>五、总结</strong><br><br>记录下来，方便以后查看。。。<br></p>
 
-          
-        
       
     </div>
 
@@ -559,14 +418,36 @@
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/配置/" rel="tag"># 配置</a>
+          
+        </div>
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/27/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </div>
@@ -576,14 +457,15 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -820,6 +702,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.0"></script>
+
+
 
   
 
