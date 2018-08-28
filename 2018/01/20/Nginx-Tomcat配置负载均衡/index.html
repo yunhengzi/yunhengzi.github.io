@@ -14,7 +14,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="">
+<html class="theme-next mist use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -108,24 +108,24 @@
 
 
 
-  <meta name="description" content="一、准备工作(1)下载Tomcat8.5,网址： https://tomcat.apache.org/download-80.cgi (2)下载Nginx，网址：http://nginx.org/en/download.html 二、配置Tomcat(1)将下载好的Tomcat解压并命名为Tomcat1，复制Tomcat1至当前目录并重命名为Tomcat2(2)打开~/Tomcat1/conf/s">
+  <meta name="description" content="一、准备工作(1)下载Tomcat8.5,网址： https://tomcat.apache.org/download-80.cgi (2)下载Nginx，网址：http://nginx.org/en/download.html">
 <meta name="keywords" content="配置">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Nginx+Tomcat配置负载均衡">
 <meta property="og:url" content="http://yoursite.com/2018/01/20/Nginx-Tomcat配置负载均衡/index.html">
 <meta property="og:site_name" content="云恒子的博客">
-<meta property="og:description" content="一、准备工作(1)下载Tomcat8.5,网址： https://tomcat.apache.org/download-80.cgi (2)下载Nginx，网址：http://nginx.org/en/download.html 二、配置Tomcat(1)将下载好的Tomcat解压并命名为Tomcat1，复制Tomcat1至当前目录并重命名为Tomcat2(2)打开~/Tomcat1/conf/s">
-<meta property="og:locale" content="default">
+<meta property="og:description" content="一、准备工作(1)下载Tomcat8.5,网址： https://tomcat.apache.org/download-80.cgi (2)下载Nginx，网址：http://nginx.org/en/download.html">
+<meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.imgur.com/UKoIDmd.png">
 <meta property="og:image" content="https://i.imgur.com/42hdqnM.png">
 <meta property="og:image" content="https://i.imgur.com/cksnzpG.png">
 <meta property="og:image" content="https://i.imgur.com/DkvHXf1.png">
 <meta property="og:image" content="https://i.imgur.com/z6L0XI9.png">
 <meta property="og:image" content="https://i.imgur.com/m8hUsit.png">
-<meta property="og:updated_time" content="2018-02-15T09:29:52.589Z">
+<meta property="og:updated_time" content="2018-08-28T01:36:19.842Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nginx+Tomcat配置负载均衡">
-<meta name="twitter:description" content="一、准备工作(1)下载Tomcat8.5,网址： https://tomcat.apache.org/download-80.cgi (2)下载Nginx，网址：http://nginx.org/en/download.html 二、配置Tomcat(1)将下载好的Tomcat解压并命名为Tomcat1，复制Tomcat1至当前目录并重命名为Tomcat2(2)打开~/Tomcat1/conf/s">
+<meta name="twitter:description" content="一、准备工作(1)下载Tomcat8.5,网址： https://tomcat.apache.org/download-80.cgi (2)下载Nginx，网址：http://nginx.org/en/download.html">
 <meta name="twitter:image" content="https://i.imgur.com/UKoIDmd.png">
 
 
@@ -183,7 +183,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -209,7 +209,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Toggle navigation bar">
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -227,20 +227,52 @@
         
         
           
-          <li class="menu-item menu-item-home">
+          <li class="menu-item menu-item-首页">
     <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Startseite</a>
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
   </li>
         
         
         
           
-          <li class="menu-item menu-item-archive">
+          <li class="menu-item menu-item-归档">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />archive</a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-分类">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-标签">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-关于">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
   </li>
 
       
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+        </li>
       
     </ul>
   
@@ -250,6 +282,29 @@
 
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -292,7 +347,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="云恒子">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="工匠精神，架构精神！">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -323,14 +378,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">发表于</span>
               
 
               
                 
               
 
-              <time title="Post created: 2018-01-20 19:24:57" itemprop="dateCreated datePublished" datetime="2018-01-20T19:24:57+08:00">2018-01-20</time>
+              <time title="创建时间：2018-01-20 19:24:57" itemprop="dateCreated datePublished" datetime="2018-01-20T19:24:57+08:00">2018-01-20</time>
             
 
             
@@ -345,9 +400,9 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Edited on</span>
+                  <span class="post-meta-item-text">更新于</span>
                 
-                <time title="Updated at: 2018-02-15 17:29:52" itemprop="dateModified" datetime="2018-02-15T17:29:52+08:00">2018-02-15</time>
+                <time title="修改时间：2018-08-28 09:36:19" itemprop="dateModified" datetime="2018-08-28T09:36:19+08:00">2018-08-28</time>
               
             
           </span>
@@ -361,7 +416,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">分类于</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/server/" itemprop="url" rel="index"><span itemprop="name">server</span></a></span>
@@ -398,8 +453,11 @@
       
 
       
-        <p><strong>一、准备工作<br></strong><br>(1)<strong>下载Tomcat8.5</strong>,网址： <a href="https://tomcat.apache.org/download-80.cgi" target="_blank" rel="noopener">https://tomcat.apache.org/download-80.cgi</a> <br><br>(2)<strong>下载Nginx</strong>，网址：<a href="http://nginx.org/en/download.html" target="_blank" rel="noopener">http://nginx.org/en/download.html</a><br><br></p>
-<p><strong>二、配置Tomcat<br></strong><br>(1)将下载好的Tomcat解压并命名为Tomcat1，复制Tomcat1至当前目录并重命名为Tomcat2<br><br>(2)打开~/Tomcat1/conf/server.xml文件，修改三个端口值(可修改为其他值，只要未被占用即可)<br><br><img src="https://i.imgur.com/UKoIDmd.png" alt=""><br><br><img src="https://i.imgur.com/42hdqnM.png" alt=""><br><br><img src="https://i.imgur.com/cksnzpG.png" alt=""><br><br>对~/Tomcat2/conf/server.xml文件进行上述相同的操作，端口值依次改为：8205  8280  8209<br><br><br>(3)在两个Tomcat的webapps/ROOT/下新建success.jsp文件，文件内容依次为：<br><br><img src="https://i.imgur.com/DkvHXf1.png" alt=""><br><br><br><img src="https://i.imgur.com/z6L0XI9.png" alt=""><br><br><br>(4)启动Tomcat测试：<br><br>在Tomcat1的bin目录下双击startup.bat启动Tomcat<br><br>ps:如果之前安装过Tomcat且配置到系统环境中，这里双击会打开之前的Tomcat版本,解决方法：用记事本或其他编辑器打开startup.bat自定义CATALINA_HOME值，set “CATALINA_HOME=Tomcat1所在目录\Tomcat1”,再双击startup.bat即可。<br><br>在浏览器上访问：localhost:8180/success.jsp,会显示tomcat1<br><br>同样对Tomcat2进行上述操作。<br><br><br><strong>三、配置Nginx</strong><br><br>将下载好的Nginx解压，打开~/conf/nginx.conf文件，相关配置如下：<br><br><img src="https://i.imgur.com/m8hUsit.png" alt=""><br><br>upstream后面的hello.com必须和location中的hello.com相一致,server后面的URL与两个Tomcat的相对应；<br><br>upstream中的weight是权重<br><br>server中listen的端口号根据实际情况选择修改<br><br><br><strong>四、测试<br></strong><br>启动Nginx:在Nginx目录下打开命令行，输入start nginx<br><br>两个Tomcat之前的方法开启<br><br>在浏览器上访问localhost:8089/success.jsp,会显示和tomcat1或tomcat2，多刷新几次，会发现tomcat1的次数与tomcat2的次数比值为：2：5<br><br><br><strong>五、总结</strong><br><br>记录下来，方便以后查看。。。<br></p>
+        <h2 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作<br></h2><p>(1)<strong>下载Tomcat8.5</strong>,网址： <a href="https://tomcat.apache.org/download-80.cgi" target="_blank" rel="noopener">https://tomcat.apache.org/download-80.cgi</a> <br><br>(2)<strong>下载Nginx</strong>，网址：<a href="http://nginx.org/en/download.html" target="_blank" rel="noopener">http://nginx.org/en/download.html</a><br><br><br><a id="more"></a></p>
+<h2 id="二、配置Tomcat"><a href="#二、配置Tomcat" class="headerlink" title="二、配置Tomcat"></a>二、配置Tomcat<br></h2><p>(1)将下载好的Tomcat解压并命名为Tomcat1，复制Tomcat1至当前目录并重命名为Tomcat2<br><br>(2)打开~/Tomcat1/conf/server.xml文件，修改三个端口值(可修改为其他值，只要未被占用即可)<br><br><img src="https://i.imgur.com/UKoIDmd.png" alt=""><br><br><img src="https://i.imgur.com/42hdqnM.png" alt=""><br><br><img src="https://i.imgur.com/cksnzpG.png" alt=""><br><br>对~/Tomcat2/conf/server.xml文件进行上述相同的操作，端口值依次改为：8205  8280  8209<br><br><br>(3)在两个Tomcat的webapps/ROOT/下新建success.jsp文件，文件内容依次为：<br><br><img src="https://i.imgur.com/DkvHXf1.png" alt=""><br><br><br><img src="https://i.imgur.com/z6L0XI9.png" alt=""><br><br><br>(4)启动Tomcat测试：<br><br>在Tomcat1的bin目录下双击startup.bat启动Tomcat<br><br>ps:如果之前安装过Tomcat且配置到系统环境中，这里双击会打开之前的Tomcat版本,解决方法：用记事本或其他编辑器打开startup.bat自定义CATALINA_HOME值，set “CATALINA_HOME=Tomcat1所在目录\Tomcat1”,再双击startup.bat即可。<br><br>在浏览器上访问：localhost:8180/success.jsp,会显示tomcat1<br><br>同样对Tomcat2进行上述操作。<br><br></p>
+<h2 id="三、配置Nginx"><a href="#三、配置Nginx" class="headerlink" title="三、配置Nginx"></a>三、配置Nginx</h2><p>将下载好的Nginx解压，打开~/conf/nginx.conf文件，相关配置如下：<br><br><img src="https://i.imgur.com/m8hUsit.png" alt=""><br><br>upstream后面的hello.com必须和location中的hello.com相一致,server后面的URL与两个Tomcat的相对应；<br><br>upstream中的weight是权重<br><br>server中listen的端口号根据实际情况选择修改<br><br></p>
+<h2 id="四、测试"><a href="#四、测试" class="headerlink" title="四、测试"></a>四、测试<br></h2><p>启动Nginx:在Nginx目录下打开命令行，输入start nginx<br><br>两个Tomcat之前的方法开启<br><br>在浏览器上访问localhost:8089/success.jsp,会显示和tomcat1或tomcat2，多刷新几次，会发现tomcat1的次数与tomcat2的次数比值为：2：5<br><br></p>
+<h2 id="五、总结"><a href="#五、总结" class="headerlink" title="五、总结"></a>五、总结</h2><p>记录下来，方便以后查看。。。<br></p>
 
       
     </div>
@@ -429,22 +487,6 @@
       
       
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/27/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
 
       
@@ -486,8 +528,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -496,7 +547,7 @@
                 alt="云恒子" />
             
               <p class="site-author-name" itemprop="name">云恒子</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">工匠精神，架构精神！</p>
           </div>
 
           
@@ -506,8 +557,8 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">2</span>
-                    <span class="site-state-item-name">Artikel</span>
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
               
@@ -522,7 +573,7 @@
                       
                     
                     <span class="site-state-item-count">1</span>
-                    <span class="site-state-item-name">Kategorien</span>
+                    <span class="site-state-item-name">分类</span>
                   
                 </div>
               
@@ -531,14 +582,14 @@
                 
                 
                 <div class="site-state-item site-state-tags">
-                  
+                  <a href="/tags/index.html">
                     
                     
                       
                     
                     <span class="site-state-item-count">1</span>
-                    <span class="site-state-item-name">Tags</span>
-                  
+                    <span class="site-state-item-name">标签</span>
+                  </a>
                 </div>
               
             </nav>
@@ -577,6 +628,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、准备工作"><span class="nav-number">1.</span> <span class="nav-text">一、准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、配置Tomcat"><span class="nav-number">2.</span> <span class="nav-text">二、配置Tomcat</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、配置Nginx"><span class="nav-number">3.</span> <span class="nav-text">三、配置Nginx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、测试"><span class="nav-number">4.</span> <span class="nav-text">四、测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、总结"><span class="nav-number">5.</span> <span class="nav-text">五、总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -604,15 +671,22 @@
 
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.7.1</div>
 
 
 
-  <span class="post-meta-divider">|</span>
 
 
 
-  <div class="theme-info">Theme – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.4.0</div>
+<div>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv" style='display:none'>
+    本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+    <span class="post-meta-divider">|</span>
+</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+    本站总来访者 <span id="busuanzi_value_site_uv"></span>人
+</span>
+</div>
 
 
 
@@ -734,6 +808,326 @@
 
 
   
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
 
 
 
