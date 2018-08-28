@@ -1,6 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[hello]]></title>
+    <url>%2F2018%2F03%2F27%2Fhello%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[java注解]]></title>
+    <url>%2F2018%2F02%2F15%2Fjava%E6%B3%A8%E8%A7%A3%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[java线程基础]]></title>
+    <url>%2F2018%2F02%2F15%2Fjava%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[java线程池]]></title>
+    <url>%2F2018%2F02%2F15%2Fjava%E7%BA%BF%E7%A8%8B%E6%B1%A0%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[jvm调参]]></title>
+    <url>%2F2018%2F02%2F15%2Fjvm%E8%B0%83%E5%8F%82%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[jvm入门基础-1]]></title>
+    <url>%2F2018%2F02%2F15%2Fjvm%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80-1%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[python(requests+BeautifulSoup)爬取网页数据]]></title>
+    <url>%2F2018%2F02%2F15%2Fpython-requests-BeautifulSoup-%E7%88%AC%E5%8F%96%E7%BD%91%E9%A1%B5%E6%95%B0%E6%8D%AE%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[python(requests+BeautifulSoup)模拟登录CSDN]]></title>
+    <url>%2F2018%2F02%2F15%2Fpython-requests-BeautifulSoup-%E6%A8%A1%E6%8B%9F%E7%99%BB%E5%BD%95CSDN%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[java(jsoup)模拟登录CSDN]]></title>
+    <url>%2F2018%2F02%2F15%2Fjava-jsoup-%E6%A8%A1%E6%8B%9F%E7%99%BB%E5%BD%95CSDN%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[java(jsoup)爬取网页数据]]></title>
+    <url>%2F2018%2F02%2F15%2Fjava-jsoup-%E7%88%AC%E5%8F%96%E7%BD%91%E9%A1%B5%E6%95%B0%E6%8D%AE%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[sublime text 3卡顿]]></title>
+    <url>%2F2018%2F02%2F15%2Fsublime-text-3%E5%8D%A1%E9%A1%BF%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[spring源码下载地址]]></title>
+    <url>%2F2018%2F01%2F22%2Fspring%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80%2F</url>
+    <content type="text"><![CDATA[https://github.com/spring-projects/spring-framework/tags]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[Nginx+Tomcat配置负载均衡]]></title>
     <url>%2F2018%2F01%2F20%2FNginx-Tomcat%E9%85%8D%E7%BD%AE%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%2F</url>
     <content type="text"><![CDATA[一、准备工作(1)下载Tomcat8.5,网址： https://tomcat.apache.org/download-80.cgi(2)下载Nginx，网址：http://nginx.org/en/download.html 二、配置Tomcat(1)将下载好的Tomcat解压并命名为Tomcat1，复制Tomcat1至当前目录并重命名为Tomcat2(2)打开~/Tomcat1/conf/server.xml文件，修改三个端口值(可修改为其他值，只要未被占用即可)对~/Tomcat2/conf/server.xml文件进行上述相同的操作，端口值依次改为：8205 8280 8209(3)在两个Tomcat的webapps/ROOT/下新建success.jsp文件，文件内容依次为：(4)启动Tomcat测试：在Tomcat1的bin目录下双击startup.bat启动Tomcatps:如果之前安装过Tomcat且配置到系统环境中，这里双击会打开之前的Tomcat版本,解决方法：用记事本或其他编辑器打开startup.bat自定义CATALINA_HOME值，set “CATALINA_HOME=Tomcat1所在目录\Tomcat1”,再双击startup.bat即可。在浏览器上访问：localhost:8180/success.jsp,会显示tomcat1同样对Tomcat2进行上述操作。 三、配置Nginx将下载好的Nginx解压，打开~/conf/nginx.conf文件，相关配置如下：upstream后面的hello.com必须和location中的hello.com相一致,server后面的URL与两个Tomcat的相对应；upstream中的weight是权重server中listen的端口号根据实际情况选择修改 四、测试启动Nginx:在Nginx目录下打开命令行，输入start nginx两个Tomcat之前的方法开启在浏览器上访问localhost:8089/success.jsp,会显示和tomcat1或tomcat2，多刷新几次，会发现tomcat1的次数与tomcat2的次数比值为：2：5 五、总结记录下来，方便以后查看。。。]]></content>
@@ -10,5 +73,40 @@
       <tags>
         <tag>配置</tag>
       </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[jdk环境配置]]></title>
+    <url>%2F2018%2F01%2F13%2Fjdk%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[准备工作：安装好jdk，并知晓jdk安装的路径1.计算机（右击）→属性→高级系统设置→高级→环境变量，或者win键+pausebreak→高级系统设置→高级→环境变量2.在系统变量中点击新建，变量名为JAVA_HOME，变量值为jdk路径（例如：D:\java\jdk1.8.1)3.在系统变量中点击新建，变量名为CLASSPATH，变量值为.;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar(开头的点不要忘了)4.在系统变量中找到Path，点击编辑，在变量值后面加上;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;(开头的分号不要忘了)5.打开cmd，输入java -version测试是否配置成功，成功会显示jdk版本信息]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>配置</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[android studio 3.0 AAPT2编译报错]]></title>
+    <url>%2F2018%2F01%2F12%2Fandroid-studio-3-0-AAPT2%E7%BC%96%E8%AF%91%E6%8A%A5%E9%94%99%2F</url>
+    <content type="text"><![CDATA[打开项目的中的gradle.properties文件，并在文件末尾加上android.enableAapt2=false，再Sync Now即可.]]></content>
+      <categories>
+        <category>android</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[jvisualvm插件安装教程]]></title>
+    <url>%2F2018%2F01%2F12%2Fjvisualvm%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[jvisualvm是一款JAVA性能分析工具，在jdk的bin目录下，并且可以集成其他的插件安装插件步骤：启动jvisualvm，打开 工具→插件，当你检查更新或查看可用插件时会发现连接不上，因为原先地址已经废弃了，新地址迁移到了github上，访问https://visualvm.github.io/pluginscenters.html 找到对应的插件中心，复制Catalog URL，并在jvisualvm插件的设置中编辑visualvm插件中心，更换原先的URL即可，这时候就会显示可用插件等信息，直接安装即可。]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[String, StringBuffer, StringBuilder的区别]]></title>
+    <url>%2F2018%2F01%2F09%2FString-StringBuffer-StringBuilder%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
+    <content type="text"><![CDATA[比较：String：字符串常量，速度慢StringBuffer：字符串变量，速度较快，线程安全StringBuilder：字符串变量，速度快，线程不安全 适用场景：String：操作少量数据StringBuffer：操作大量数据，多线程StringBuilder：操作大量数据，单线程]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
   </entry>
 </search>
