@@ -122,7 +122,7 @@
 <meta property="og:image" content="https://i.imgur.com/DkvHXf1.png">
 <meta property="og:image" content="https://i.imgur.com/z6L0XI9.png">
 <meta property="og:image" content="https://i.imgur.com/m8hUsit.png">
-<meta property="og:updated_time" content="2018-09-09T14:13:29.019Z">
+<meta property="og:updated_time" content="2018-09-09T14:16:25.543Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nginx+Tomcat配置负载均衡">
 <meta name="twitter:description" content="一、准备工作(1)下载Tomcat8.5,网址： https://tomcat.apache.org/download-80.cgi(2)下载Nginx，网址：http://nginx.org/en/download.html">
@@ -462,8 +462,9 @@
 <h2 id="二、配置Tomcat"><a href="#二、配置Tomcat" class="headerlink" title="二、配置Tomcat"></a>二、配置Tomcat</h2><p>(1)将下载好的Tomcat解压并命名为Tomcat1，复制Tomcat1至当前目录并重命名为Tomcat2<br>(2)打开~/Tomcat1/conf/server.xml文件，修改三个端口值(可修改为其他值，只要未被占用即可)<br><img src="https://i.imgur.com/UKoIDmd.png" alt=""><br><img src="https://i.imgur.com/42hdqnM.png" alt=""><br><img src="https://i.imgur.com/cksnzpG.png" alt=""><br>对~/Tomcat2/conf/server.xml文件进行上述相同的操作，端口值依次改为：8205  8280  8209<br>(3)在两个Tomcat的webapps/ROOT/下新建success.jsp文件，文件内容依次为：<br><img src="https://i.imgur.com/DkvHXf1.png" alt=""><br><img src="https://i.imgur.com/z6L0XI9.png" alt=""><br>(4)启动Tomcat测试：<br>在Tomcat1的bin目录下双击startup.bat启动Tomcat<br>ps:如果之前安装过Tomcat且配置到系统环境中，这里双击会打开之前的Tomcat版本,解决方法：用记事本或其他编辑器打开startup.bat自定义CATALINA_HOME值，set “CATALINA_HOME=Tomcat1所在目录\Tomcat1”,再双击startup.bat即可。<br>在浏览器上访问：localhost:8180/success.jsp,会显示tomcat1<br>同样对Tomcat2进行上述操作。</p>
 <h2 id="三、配置Nginx"><a href="#三、配置Nginx" class="headerlink" title="三、配置Nginx"></a>三、配置Nginx</h2><p>将下载好的Nginx解压，打开~/conf/nginx.conf文件，相关配置如下：<br><img src="https://i.imgur.com/m8hUsit.png" alt=""><br>upstream后面的hello.com必须和location中的hello.com相一致,server后面的URL与两个Tomcat的相对应；<br>upstream中的weight是权重<br>server中listen的端口号根据实际情况选择修改</p>
 <h2 id="四、测试"><a href="#四、测试" class="headerlink" title="四、测试"></a>四、测试</h2><p>启动Nginx:在Nginx目录下打开命令行，输入start nginx<br>两个Tomcat之前的方法开启<br>在浏览器上访问localhost:8089/success.jsp,会显示和tomcat1或tomcat2，多刷新几次，会发现tomcat1的次数与tomcat2的次数比值为：2：5</p>
+<p><br></p>
 <blockquote>
-<p>###版权声明：未经许可，禁止转载</p>
+<p>版权声明：未经许可，禁止转载</p>
 </blockquote>
 
       
