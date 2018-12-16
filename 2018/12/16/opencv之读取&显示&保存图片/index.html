@@ -116,7 +116,7 @@
 <meta property="og:site_name" content="云恒子的博客">
 <meta property="og:description" content="简介OpenCV是一个跨平台计算机视觉库。由C/C++实现，提供了Python等语言的接口，实现了图像处理和计算机视觉方面的很多通用算法。本博客主要是通过OpenCV中的Python接口来实现相关Demo(环境为：Python3.6、OpenCV3.4)。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-16T07:18:38.061Z">
+<meta property="og:updated_time" content="2018-12-16T07:25:28.559Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="opencv之读取、显示和保存图片">
 <meta name="twitter:description" content="简介OpenCV是一个跨平台计算机视觉库。由C/C++实现，提供了Python等语言的接口，实现了图像处理和计算机视觉方面的很多通用算法。本博客主要是通过OpenCV中的Python接口来实现相关Demo(环境为：Python3.6、OpenCV3.4)。">
@@ -459,7 +459,7 @@
 </ul>
 <p>返回值为：numpy.ndarray类型</p>
 <hr>
-<p>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import cv2 as cv</span><br><span class="line">import numpy as np</span><br><span class="line">img = cv.imread(&quot;./res/cv/lena.jpg&quot;)</span><br><span class="line">print(type(img))</span><br><span class="line">print(img.shape)</span><br><span class="line">print(img.dtype)</span><br></pre></td></tr></table></figure></p>
+<p>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import cv2 as cv</span><br><span class="line">import numpy as np</span><br><span class="line">img = cv.imread(&quot;./lena.jpg&quot;)</span><br><span class="line">print(type(img))</span><br><span class="line">print(img.shape)</span><br><span class="line">print(img.dtype)</span><br></pre></td></tr></table></figure></p>
 <p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;class &apos;numpy.ndarray&apos;&gt;</span><br><span class="line">(512, 512, 3) #高、宽、通道数</span><br><span class="line">uint8 #元素数据类型</span><br></pre></td></tr></table></figure></p>
 <hr>
 
