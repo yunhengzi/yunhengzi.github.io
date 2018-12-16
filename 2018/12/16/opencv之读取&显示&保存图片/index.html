@@ -116,10 +116,13 @@
 <meta property="og:site_name" content="云恒子的博客">
 <meta property="og:description" content="简介OpenCV是一个跨平台计算机视觉库。由C/C++实现，提供了Python等语言的接口，实现了图像处理和计算机视觉方面的很多通用算法。本博客主要是通过OpenCV中的Python接口来实现相关Demo(环境为：Python3.6、OpenCV3.4)。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-16T07:41:01.271Z">
+<meta property="og:image" content="https://i.imgur.com/Evstkgn.png">
+<meta property="og:image" content="https://i.imgur.com/BPXhSbJ.png">
+<meta property="og:updated_time" content="2018-12-16T07:43:54.389Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="opencv之读取、显示和保存图片">
 <meta name="twitter:description" content="简介OpenCV是一个跨平台计算机视觉库。由C/C++实现，提供了Python等语言的接口，实现了图像处理和计算机视觉方面的很多通用算法。本博客主要是通过OpenCV中的Python接口来实现相关Demo(环境为：Python3.6、OpenCV3.4)。">
+<meta name="twitter:image" content="https://i.imgur.com/Evstkgn.png">
 
 
 
@@ -470,7 +473,7 @@
 <p>返回值：None</p>
 <hr>
 <p>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import cv2 as cv</span><br><span class="line">import numpy as np</span><br><span class="line">img = cv.imread(&quot;./res/cv/lena.jpg&quot;)</span><br><span class="line">cv.imshow(&quot;img&quot;, img)</span><br><span class="line">cv.waitKey(0) # 窗口等待指定时间关闭(单位为ms)，0为等待按键事件</span><br><span class="line">cv.destroyAllWindows() # 销毁所有窗口</span><br></pre></td></tr></table></figure></p>
-<p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](https://i.imgur.com/Evstkgn.png)</span><br></pre></td></tr></table></figure></p>
+<p>结果：<br><img src="https://i.imgur.com/Evstkgn.png" alt=""></p>
 <hr>
 <h2 id="保存图片"><a href="#保存图片" class="headerlink" title="保存图片"></a>保存图片</h2><p>函数：def imwrite(filename, img, params=None):<br>参数：</p>
 <ul>
@@ -481,7 +484,7 @@
 <p>返回值：布尔型</p>
 <hr>
 <p>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import cv2 as cv</span><br><span class="line">import numpy as np</span><br><span class="line">img = cv.imread(&quot;./lena.jpg&quot;)</span><br><span class="line">cv.imwrite(&quot;./lena-1.jpg&quot;, img)</span><br></pre></td></tr></table></figure></p>
-<p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](https://i.imgur.com/BPXhSbJ.png)</span><br></pre></td></tr></table></figure></p>
+<p>结果：<br><img src="https://i.imgur.com/BPXhSbJ.png" alt=""></p>
 <hr>
 <blockquote>
 <p>###未经许可，禁止转载！</p>
