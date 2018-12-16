@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[opencv之读取、保存图片]]></title>
     <url>%2F2018%2F12%2F16%2Fopencv%E4%B9%8B%E8%AF%BB%E5%8F%96%26%E4%BF%9D%E5%AD%98%E5%9B%BE%E7%89%87%2F</url>
-    <content type="text"><![CDATA[简介OpenCV是一个跨平台计算机视觉库。由C/C++实现，提供了Python等语言的接口，实现了图像处理和计算机视觉方面的很多通用算法。本博客主要是通过OpenCV中的Python接口来实现相关Demo(环境为：Python3.6、OpenCV3.4)。 读取图片函数：def imread(filename, flags=None):参数： filename——图片路径 flags——默认值为None(可选)，表现加载图片的模式，例如为0时表示加载的图片为灰度型返回值为：numpy.ndarray类型 例子：123456import cv2 as cvimport numpy as npimg = cv.imread(&quot;./res/cv/lena.jpg&quot;)print(type(img))print(img.shape)print(img.dtype) 结果：123&lt;class &apos;numpy.ndarray&apos;&gt;(512, 512, 3)uint8]]></content>
+    <content type="text"><![CDATA[简介OpenCV是一个跨平台计算机视觉库。由C/C++实现，提供了Python等语言的接口，实现了图像处理和计算机视觉方面的很多通用算法。本博客主要是通过OpenCV中的Python接口来实现相关Demo(环境为：Python3.6、OpenCV3.4)。 读取图片函数：def imread(filename, flags=None):参数： filename——图片路径 flags——默认值为None(可选)，表现加载图片的模式，例如为0时表示加载的图片为灰度型 返回值为：numpy.ndarray类型 例子：123456import cv2 as cvimport numpy as npimg = cv.imread(&quot;./res/cv/lena.jpg&quot;)print(type(img))print(img.shape)print(img.dtype) 结果：123&lt;class &apos;numpy.ndarray&apos;&gt;(512, 512, 3)uint8]]></content>
       <categories>
         <category>CV</category>
       </categories>
