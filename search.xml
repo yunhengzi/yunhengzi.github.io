@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[OpenCV调用摄像头&读取视频]]></title>
+    <url>%2F2018%2F12%2F17%2F%C2%96OpenCV%E8%B0%83%E7%94%A8%E6%91%84%E5%83%8F%E5%A4%B4-%E8%AF%BB%E5%8F%96%E8%A7%86%E9%A2%91%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[OpenCV之读取、显示和保存图片]]></title>
     <url>%2F2018%2F12%2F16%2F%C2%96OpenCV%E4%B9%8B%E8%AF%BB%E5%8F%96-%E6%98%BE%E7%A4%BA-%E4%BF%9D%E5%AD%98%E5%9B%BE%E7%89%87%2F</url>
-    <content type="text"><![CDATA[简介OpenCV是一个跨平台计算机视觉库。由C/C++实现，提供了Python等语言的接口，实现了图像处理和计算机视觉方面的很多通用算法。本博客主要是通过OpenCV中的Python接口来实现相关Demo(环境为：Python3.6、OpenCV3.4)。 读取图片函数：def imread(filename, flags=None):参数： filename——图片路径 flags——默认值为None(可选)，表示加载图片的模式，例如为0时表示加载的图片为灰度型 返回值为：numpy.ndarray类型 例子：123456import cv2 as cvimport numpy as npimg = cv.imread(&quot;./lena.jpg&quot;)print(type(img))print(img.shape)print(img.dtype) 结果：123&lt;class &apos;numpy.ndarray&apos;&gt;(512, 512, 3) #高、宽、通道数uint8 #元素数据类型 显示图片函数：def imshow(winname, mat):参数： winname——在窗口名为winname的窗口上显示图片，没有则创建 mat——numpy.ndarray类型的数据 返回值：None 例子：123456import cv2 as cvimport numpy as npimg = cv.imread(&quot;./res/cv/lena.jpg&quot;)cv.imshow(&quot;img&quot;, img)cv.waitKey(0) # 窗口等待指定时间关闭(单位为ms)，0为等待按键事件cv.destroyAllWindows() # 销毁所有窗口 结果： 保存图片函数：def imwrite(filename, img, params=None):参数： filename——保存的路径文件名 img——numpy.ndarray类型的数据 params——可选，默认值None 返回值：布尔型 例子：1234import cv2 as cvimport numpy as npimg = cv.imread(&quot;./lena.jpg&quot;)cv.imwrite(&quot;./lena-1.jpg&quot;, img) 结果： 未经许可，禁止转载！]]></content>
+    <content type="text"><![CDATA[简介OpenCV是一个跨平台计算机视觉库。由C/C++实现，提供了Python等语言的接口，实现了图像处理和计算机视觉方面的很多通用算法。本博客主要是通过OpenCV中的Python接口来实现相关Demo(环境为：Python3.6、OpenCV3.4)。 读取图片函数：def imread(filename, flags=None):参数： filename——图片路径 flags——默认值为None(可选)，表示加载图片的模式，例如为0时表示加载的图片为灰度型 返回值为：numpy.ndarray类型 例子：123456import cv2 as cvimport numpy as npimg = cv.imread(&quot;./lena.jpg&quot;)print(type(img))print(img.shape)print(img.dtype) 结果：123&lt;class &apos;numpy.ndarray&apos;&gt;(512, 512, 3) #高、宽、通道数uint8 #元素数据类型 显示图片函数：def imshow(winname, mat):参数： winname——在窗口名为winname的窗口上显示图片，没有则创建 mat——numpy.ndarray类型的数据 返回值：None 例子：123456import cv2 as cvimport numpy as npimg = cv.imread(&quot;./res/cv/lena.jpg&quot;)cv.imshow(&quot;img&quot;, img)cv.waitKey(0) # 窗口等待指定时间关闭(单位为ms)，0为等待按键事件cv.destroyAllWindows() # 销毁所有窗口 结果： 保存图片函数：def imwrite(filename, img, params=None):参数： filename——保存的路径文件名 img——numpy.ndarray类型的数据 params——可选，默认值None 返回值：布尔型 例子：1234import cv2 as cvimport numpy as npimg = cv.imread(&quot;./lena.jpg&quot;)cv.imwrite(&quot;./lena-1.jpg&quot;, img) 结果： 版权声明：未经许可，禁止转载！]]></content>
       <categories>
         <category>CV</category>
       </categories>
