@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[OpenCV调用摄像头&读取视频]]></title>
-    <url>%2F2018%2F12%2F17%2F%C2%96OpenCV%E8%B0%83%E7%94%A8%E6%91%84%E5%83%8F%E5%A4%B4-%E8%AF%BB%E5%8F%96%E8%A7%86%E9%A2%91%2F</url>
-    <content type="text"></content>
+    <title><![CDATA[OpenCV调用摄像头&读取视频&保存视频]]></title>
+    <url>%2F2018%2F12%2F17%2F%C2%96OpenCV%E8%B0%83%E7%94%A8%E6%91%84%E5%83%8F%E5%A4%B4-%E8%AF%BB%E5%8F%96%E8%A7%86%E9%A2%91-%E4%BF%9D%E5%AD%98%E8%A7%86%E9%A2%91%2F</url>
+    <content type="text"><![CDATA[调用摄像头类：class VideoCapture(object):部分函数： def read(self, image=None):——读取视频帧，参数可选 def release(self):——释放对象 例子：1234567891011import cv2 as cvcapture = cv.VideoCapture(0) # 参数0表示第一个摄像头，以此类推， 返回摄像头对象（视频对象）while True: ret, frame = capture.read() # 读取视频帧存于frame，若读取不到返回False至ret，否则返回True，若想保存该帧图片，直接imwrite(path+name, frame)即可 if ret is False: break cv.imshow(&quot;camera&quot;, frame) # 显示捕获的帧 if cv.waitKey(1) &amp; 0xFF == ord(&apos;q&apos;): # 等待1ms，按q退出 breakcapture.release() #释放摄像头(视频）cv.destroyAllWindows() 读取视频与上述调用摄像头一致，只是将VideoCapture()参数改为视频的路径名补充两个函数： def get(self, propId): ——参数范围（0-18），返回对应属性或值，例如7对应视频文件中的帧数 def set(self, propId, value):——与get相对，设置部分对应的属性值 例子：1234567891011import cv2 as cvcapture = cv.VideoCapture(&quot;./test.avi&quot;) # 返回视频对象while True: ret, frame = capture.read() # 读取视频帧存于frame，若读取不到返回False至ret，否则返回True if ret is False: break cv.imshow(&quot;camera&quot;, frame) # 显示捕获的帧 if cv.waitKey(1) &amp; 0xFF == ord(&apos;q&apos;): # 等待1ms，按q退出 breakcapture.release() #释放视频对象cv.destroyAllWindows() 保存视频类：class VideoWriter(object):部分函数： def fourcc(cls, c1, c2, c3, c4):——作用是输入四个字符代码得到对应的视频编码器 def release(self):——释放资源 例子：12345678910111213141516import cv2 as cvcapture = cv.VideoCapture(0) # 参数0表示第一个摄像头，以此类推，返回摄像头对象capture.set(3,500)capture.set(4,500)fourcc = cv.VideoWriter_fourcc(*&quot;MPEG&quot;)out = cv.VideoWriter(&quot;./output.avi&quot;, fourcc, 20,(600, 600)) # 第一个参数是路径和文件名；第二个参数是视频格式；第三个参数则是镜头快慢的(20为正常)；第四个参数是视频尺寸while True: ret, frame = capture.read() # 读取视频帧存于frame，若读取不到返回False至ret，否则返回True if ret is False: break out.write(frame) # 保存视频 if cv.waitKey(1) &amp; 0xFF == ord(&apos;q&apos;): # 等待1ms，按q退出 breakcapture.release() #释放摄像头对象out.release() cv.destroyAllWindows()]]></content>
+      <categories>
+        <category>CV</category>
+      </categories>
+      <tags>
+        <tag>OpenCV</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[OpenCV之读取、显示和保存图片]]></title>
