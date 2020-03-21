@@ -34,23 +34,15 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[jdk环境配置]]></title>
-    <url>%2F2018%2F01%2F13%2Fjdk%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%2F</url>
-    <content type="text"><![CDATA[准备工作：安装好jdk，并知晓jdk安装的路径1.计算机（右击）→属性→高级系统设置→高级→环境变量，或者win键+pausebreak→高级系统设置→高级→环境变量2.在系统变量中点击新建，变量名为JAVA_HOME，变量值为jdk路径（例如：D:\java\jdk1.8.1)3.在系统变量中点击新建，变量名为CLASSPATH，变量值为.;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar(开头的点不要忘了)4.在系统变量中找到Path，点击编辑，在变量值后面加上;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;(开头的分号不要忘了)5.打开cmd，输入java -version测试是否配置成功，成功会显示jdk版本信息]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>配置</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[android studio 3.0 AAPT2编译报错]]></title>
     <url>%2F2018%2F01%2F12%2Fandroid-studio-3-0-AAPT2%E7%BC%96%E8%AF%91%E6%8A%A5%E9%94%99%2F</url>
     <content type="text"><![CDATA[打开项目的中的gradle.properties文件，并在文件末尾加上android.enableAapt2=false，再Sync Now即可.]]></content>
       <categories>
         <category>android</category>
       </categories>
+      <tags>
+        <tag>config</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[jvisualvm插件安装教程]]></title>
