@@ -49,7 +49,7 @@
     <url>%2F2018%2F01%2F12%2Fandroid-studio-3-0-AAPT2%E7%BC%96%E8%AF%91%E6%8A%A5%E9%94%99%2F</url>
     <content type="text"><![CDATA[打开项目的中的gradle.properties文件，并在文件末尾加上android.enableAapt2=false，再Sync Now即可.]]></content>
       <categories>
-        <category>config</category>
+        <category>配置</category>
       </categories>
       <tags>
         <tag>android</tag>
