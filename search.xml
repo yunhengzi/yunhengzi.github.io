@@ -34,14 +34,25 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[jdk环境配置]]></title>
+    <url>%2F2018%2F01%2F13%2Fjdk%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[准备工作：安装好jdk，并知晓jdk安装的路径1.计算机（右击）→属性→高级系统设置→高级→环境变量，或者win键+pausebreak→高级系统设置→高级→环境变量2.在系统变量中点击新建，变量名为JAVA_HOME，变量值为jdk路径（例如：D:\java\jdk1.8.1)3.在系统变量中点击新建，变量名为CLASSPATH，变量值为.;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar(开头的点不要忘了)4.在系统变量中找到Path，点击编辑，在变量值后面加上;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;(开头的分号不要忘了)5.打开cmd，输入java -version测试是否配置成功，成功会显示jdk版本信息]]></content>
+      <categories>
+        <category>配置</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[android studio 3.0 AAPT2编译报错]]></title>
     <url>%2F2018%2F01%2F12%2Fandroid-studio-3-0-AAPT2%E7%BC%96%E8%AF%91%E6%8A%A5%E9%94%99%2F</url>
     <content type="text"><![CDATA[打开项目的中的gradle.properties文件，并在文件末尾加上android.enableAapt2=false，再Sync Now即可.]]></content>
       <categories>
-        <category>android</category>
+        <category>config</category>
       </categories>
       <tags>
-        <tag>config</tag>
+        <tag>android</tag>
       </tags>
   </entry>
   <entry>
@@ -49,8 +60,11 @@
     <url>%2F2018%2F01%2F12%2Fjvisualvm%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%2F</url>
     <content type="text"><![CDATA[jvisualvm是一款JAVA性能分析工具，在jdk的bin目录下，并且可以集成其他的插件安装插件步骤：启动jvisualvm，打开 工具→插件，当你检查更新或查看可用插件时会发现连接不上，因为原先地址已经废弃了，新地址迁移到了github上，访问https://visualvm.github.io/pluginscenters.html 找到对应的插件中心，复制Catalog URL，并在jvisualvm插件的设置中编辑visualvm插件中心，更换原先的URL即可，这时候就会显示可用插件等信息，直接安装即可。]]></content>
       <categories>
-        <category>java</category>
+        <category>配置</category>
       </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[String, StringBuffer, StringBuilder的区别]]></title>
